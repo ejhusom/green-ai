@@ -1,0 +1,58 @@
+# data-files
+*.dat
+*.csv
+!assets/data/raw/README.md
+
+# misc:
+.DS_Store
+Trash
+*.copyright
+*.copyright
+*.exerinfo
+*.exerinfo
+*.dlog
+*.user
+
+# python
+__pycache__
+.ipynb*
+
+# temporary files:
+*.pyc
+*.bak
+*.swp
+*~
+.*~
+*.old
+tmp*
+.#*
+\#*
+Session.vim
+
+# python venv
+env/
+venv/
+venv*
+
+# large files
+model_tuning/
+models/
+
+# Files related to compilation of cython
+build/
+*.so
+cutils.c
+
+
+# project-specific files
+.dvc*
+dvc.lock
+assets/plots/
+assets/profile/
+assets/metrics/
+assets/scalers/
+assets/predictions/
+assets/features/
+models.json
+assets/models_api.json
+

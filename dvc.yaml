@@ -1,0 +1,182 @@
+stages:
+
+    profile:
+        cmd: python3 src/profiling.py assets/data/raw/
+        deps:
+        - assets/data/raw
+        - src/profiling.py
+        - src/profile.yaml
+        - src/config.py
+        outs:
+        - assets/profile
+        params:
+        - profile.dataset
+
+    clean:
+        cmd: python3 src/clean.py assets/data/raw/
+        deps:
+        - assets/data/raw
+        - assets/profile
+        - src/clean.py
+        - src/config.py
+        outs:
+        - assets/data/cleaned
+        - assets/features/output_columns.csv
+        - assets/features/removable_features.csv
+        params:
+        - clean.target
+        - clean.classification
+        - clean.onehot_encode_target
+        - clean.combine_files
+        - clean.percentage_zeros_threshold
+        - clean.correlation_metric
+        - clean.input_max_correlation_threshold
+
+    featurize:
+        cmd: python3 src/featurize.py assets/data/cleaned/
+        deps:
+        - assets/data/cleaned
+        - assets/features/output_columns.csv
+        - src/featurize.py
+        - src/config.py
+        outs:
+        - assets/data/featurized
+        - assets/features/input_columns.csv
+        params:
+        - featurize.variables_to_include
+        - featurize.use_all_engineered_features_on_all_variables
+        - featurize.add_sum
+        - featurize.add_gradient
+        - featurize.add_mean
+        - featurize.add_maximum
+        - featurize.add_minimum
+        - featurize.add_min_max_range
+        - featurize.add_slope
+        - featurize.add_slope_sin
+        - featurize.add_slope_cos
+        - featurize.add_standard_deviation
+        - featurize.add_variance
+        - featurize.add_peak_frequency
+        - featurize.rolling_window_size_sum
+        - featurize.rolling_window_size_mean
+        - featurize.rolling_window_size_max_min
+        - featurize.rolling_window_size_standard_deviation
+        - featurize.remove_features
+        - featurize.target_min_correlation_threshold
+        - clean.target
+
+    split:
+        cmd: python3 src/split.py assets/data/featurized/
+        deps:
+        - assets/data/featurized
+        - src/split.py
+        - src/config.py
+        outs:
+        - assets/data/split
+        params:
+        - split.train_split
+        - split.shuffle_files
+
+    scale:
+        cmd: python3 src/scale.py assets/data/split/
+        deps:
+        - assets/data/split
+        - assets/features/output_columns.csv
+        - src/scale.py
+        - src/config.py
+        outs:
+        - assets/data/scaled
+        - assets/scalers/input_scaler.z
+        - assets/scalers/output_scaler.z
+        params:
+        - clean.classification
+        - scale.input
+        - scale.output
+
+    sequentialize:
+        cmd: python3 src/sequentialize.py assets/data/scaled/
+        deps:
+        - assets/data/scaled
+        - assets/features/output_columns.csv
+        - src/sequentialize.py
+        - src/preprocess_utils.py
+        - src/config.py
+        outs:
+        - assets/data/sequentialized
+        params:
+        - clean.classification
+        - sequentialize.window_size
+        - sequentialize.overlap
+        - sequentialize.target_size
+        - sequentialize.shuffle_samples
+        - sequentialize.future_predict
+        - train.learning_method
+
+    combine:
+        cmd: python3 src/combine.py assets/data/sequentialized/
+        deps:
+        - assets/data/sequentialized
+        - src/combine.py
+        - src/config.py
+        outs:
+        - assets/data/combined
+
+    train:
+        cmd: python3 src/train.py assets/data/combined/train.npz
+        deps:
+        - assets/data/combined
+        - assets/features/output_columns.csv
+        - src/train.py
+        - src/neural_networks.py
+        - src/config.py
+        outs:
+        - assets/models
+        params:
+        - clean.classification
+        - train.seed
+        - train.learning_method
+        - train.hyperparameter_tuning
+        - train.n_epochs
+        - train.early_stopping
+        - train.patience
+        - train.activation_function
+        - train.batch_size
+        - train.n_layers
+        - train.n_neurons
+        - train.dropout
+        - train.n_flattened_layers
+        - train.n_flattened_nodes
+        - train.kernel_size
+        - train.maxpooling
+        - train.maxpooling_size
+        - train.unit_type
+
+    evaluate:
+        cmd: python3 src/evaluate.py assets/models/model.h5 assets/data/combined/train.npz assets/data/combined/test.npz
+        deps:
+        - assets/data/combined/test.npz
+        - assets/features/output_columns.csv
+        - assets/models/model.h5
+        - src/evaluate.py
+        - src/config.py
+        outs:
+        - assets/predictions/predictions.csv
+        - assets/predictions/true_values.csv
+        params:
+        - clean.classification
+        - evaluate.show_inputs
+        metrics:
+        - assets/metrics/metrics.json
+
+    explain:
+        cmd: python3 src/explain.py assets/models/model.h5 assets/data/combined/train.npz assets/data/combined/test.npz
+        deps:
+        - assets/data/combined/test.npz
+        - assets/features/input_columns.csv
+        - assets/models/model.h5
+        - src/explain.py
+        - src/config.py
+        params:
+        # Number of samples to use for generating shap values
+        - explain.number_of_background_samples
+        - explain.number_of_summary_samples

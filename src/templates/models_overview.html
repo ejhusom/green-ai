@@ -1,0 +1,27 @@
+        <div class=box>
+            <h2>Overview over existing virtual sensors</h2>
+
+            <div class=overviewTable>
+                <table>
+                    <thead>
+                        <tr>
+                        <th>ID</td>
+                        <th>Dataset name</th>
+                        <th>Target variable</th>
+                        <th>R2-score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%for model in models|reverse%}
+                        <tr>
+                            <td>{{models[model]["id"]}}</td>
+                            <td>{{models[model]["params"]["profile"]["dataset"]}}</td>
+                            <td>{{models[model]["params"]["clean"]["target"]}}</td>
+                            <td>{{ "%.2f" % models[model]["metrics"]["r2"]}}</td>
+                        </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>

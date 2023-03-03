@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ERDRE - Create virtual sensor</title>
+        <link href="{{ url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css" title="Stylesheet">
+        <link rel="icon" type="image/png" href="static/favicon.png">
+
+    </head>
+
+    <body>
+        <header>
+            {% include "header.html" %}
+        </header>
+
+        {% include "models_overview.html" %}
+
+        <div class="box createForm">
+            <h3>Create new virtual sensor</h3>
+            <p>A virtual sensor can be created by (A) filling out the form below, or (B) uploading a parameter file.</p>
+            <form action="create_model" method="POST" enctype="multipart/form-data">
+                <h4>(A) Fill in the parameters below:</h4>
+                <label for="dataset">Name of dataset:</label>
+                <input type="text" name="dataset"/>
+                <label for="target">Target variable:</label>
+                <input type="text" name="target"/>
+                <label for="learning_method">Learning method:</label>
+                <select name="learning_method">
+                    <option value="cnn" selected>CNN</option>
+                    <option value="dnn">DNN</option>
+                    <option value="lstm">LSTM</option>
+                </select>
+                <label for="train_split">Training/test set split ratio: <span id="train_split_value"></span></label>
+                <input type="range" min="1" max="9" value="7" class="slider" name="train_split" id="train_split">
+
+                <input type="submit" value="Create virtual sensor" onclick="loading()"/>
+            </form>
+            <form action="create_model" method="POST" enctype="multipart/form-data">
+                <h4>(B) Upload parameter file here:</h4>
+                <input type="file" name="file"/>
+                <input type="submit" value="Create virtual sensor" onclick="loading()"/>
+            </form>
+            <div id=loaderContainer>
+                <div id=loader></div>
+                <div id=loaderText>Creating virtual sensor...</div>
+            </div>
+        </div>
+
+
+        <footer>
+
+        </footer>
+    </body>
+
+    <script>
+        function loading(){
+            document.getElementById("loader").style.display = "block";
+            document.getElementById("loaderText").style.display = "block";
+        }
+
+        var slider = document.getElementById("train_split");
+        var output = document.getElementById("train_split_value");
+        output.innerHTML = slider.value / 10;
+
+        slider.oninput = function() {
+            output.innerHTML = this.value / 10;
+        }
+    </script>
+
+</html>
+
+

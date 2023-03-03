@@ -1,0 +1,166 @@
+profile:
+    # dataset: Name of data set, which is the name of the subfolder in which the data
+    # files resides: 'assets/data/raw/[dataset]/. If empty, put data files in
+    # 'assets/data/raw/'.
+    # dataset: data01
+    dataset: cnc_toolwear
+    # dataset: har3
+    # dataset: automotive
+
+clean:
+    # target: Name of target variable.
+    # target: X1_ActualPosition
+    # target: "4"
+    # target: Machining_Process
+    target: tool_condition
+    # target: M1_CURRENT_PROGRAM_NUMBER
+    # target: Axis_X_True_Power
+    # target: Axis_X_Position_Diff
+    
+    # classification: Indicates if we are dealing with a classification case
+    # (if False, a regression model will be produced).
+    classification: True
+
+    # onehot_encode_target: Whether to one-hot encode target variable or not.
+    # If the classification is binary, this variable will be ignored and set to
+    # False.
+    onehot_encode_target: False
+
+    # combine_files: Whether to combine the data from all files into one file
+    # after cleaning.
+    #
+    # Sometimes it is desirable to not combine the data into a single file,
+    # for example when:
+    # - Some specific files contain data that should be reserved for the test set.
+    # - You want to use sequences of data points as input samples, and do
+    #   not want sequences to overlap across files.
+    #
+    combine_files: True
+
+    # percentage_zeros_threshold: If the fraction of zeros in a column is
+    # larger than this threshold, the column is removed. If this parameter is
+    # set to 1.0, only columns consisting solely of zeros will be removed.
+    percentage_zeros_threshold: 1.0
+
+    # correlation_metric: Which metric to measure correlation by. Choose from:
+    # - pearson
+    correlation_metric: pearson
+
+    # input_max_correlation_threshold: If the correlation between two variables are
+    # higher than this threshold, one of them will be removed. If the threshold
+    # is set to 1.0, no variables will be removed.
+    input_max_correlation_threshold: 1.0
+
+featurize:
+    # features: Which features to use from the data set. If empty, all columns
+    # from input files are used (except those that are removed during
+    # cleaning).
+    features:
+        # - "1"
+        # - "2"
+        # - "3"
+        # - feature1
+        # - feature2
+
+    # add_rolling_features (bool): Add engineered features based on rolling
+    # sequence.
+    add_rolling_features: False
+
+    # rolling_window_size: Window size for calculating rolling features.
+    rolling_window_size: 100
+    #
+    # remove_features (list): Features to be removed. Only useful if some of
+    # the features specified above are used to create rolling features, but the
+    # raw feature itself should not be included as an input.
+    remove_features:
+        # - feature1
+        # - feature2
+        # - Axis_Y_Position_Diff
+        # - Axis_Z_Position_Diff
+        # - Axis_B_Position_Diff
+        # - Abs_Sum_Position_Diff
+
+    # target_min_correlation_threshold: Minimum correlation between target and
+    # an input feature to include the feature in the model. If set to 0.0, no
+    # features will be removed based on correlation.
+    # NB: Not implemented yet.
+    target_min_correlation_threshold: 0.0
+
+split:
+    # train_split: Fraction of data set to use for training.
+    train_split: 0.6
+
+    # shuffle_files: If data resides in multiple files, this parameter can be
+    # set to True in order to shuffle the order of the files
+    shuffle_files: False
+
+    # calibrate_split: Fraction of data set to use for calibration. If set to
+    # 0, no conformal prediction is performed.
+    calibrate_split: 0.0
+
+scale:
+    # Current available scaling methods are:
+    # - standard
+    # - minmax
+    # - robust
+    input: standard
+    
+    # output: Scaling method for output variable. Not applicable for
+    # classification.
+    # Current available scaling methods are:
+    # - standard
+    # - minmax
+    # - robust
+    output: minmax
+
+sequentialize:
+    # window_size (int): The number of input samples in each input sequence.
+    window_size: 20
+
+    # target_size (int): Number of points in prediction sequence. For classification
+    # cases, this number will have no effect, and the output size will always
+    # be 1. Currently, a target_size greater than 1 is not supported if
+    # calibrate_split > 0.
+    target_size: 1
+    
+    # shuffle_samples (bool): Shuffle samples in data set. If
+    # clean.combines_files is set to False, samples will not be shuffled across
+    # files.
+    shuffle_samples: False
+
+train:
+    # learning_method (str): Which type of machine learning method to use.
+    #
+    # Regressors/classifiers:
+    # - dnn     (dense neural network)
+    # - cnn     (convolutional neural network) 
+    # - lstm    (long short-term memory network)
+    # - dt      (decision tree)
+    # - rf      (random forest)
+    # - svm     (support vector machine)
+    # - xgboost
+    #
+    # Classifiers:
+    # - lda     (linear discriminant analysis) 
+    # - qda     (quadratic discriminant analysis)
+    learning_method: xgboost
+
+    # n_epochs (int): Number of epochs to perform during training. If
+    # early_stopping is set to True, training may be stopped before n_epochs is
+    # reached.
+    n_epochs: 10
+
+    batch_size: 512
+    
+    # kernel_size: Only applicable for CNN
+    kernel_size: 5
+
+    # early_stopping: Stop training if validation loss does not improve after
+    # [patience] number of epochs.
+    early_stopping: False
+
+    # patience: The number of epochs to wait for validation loss to improve,
+    # before stopping training early.
+    patience: 10
+
+evaluate:

@@ -1,0 +1,151 @@
+/* File:        style.css
+ * Author:      Erik Johannes Husom
+ */
+
+:root {
+    --main-font-color: rgb(57, 56, 56);
+    --secondary-font-color: rgb(142, 142, 142);
+    --accent-color: #003C65;
+    --accent-font-color: #fff;
+}
+
+/*Body{{{*/
+body {
+    font-family: Helvetica;
+    /* font-family: Industry, Helvetica, sans-serif; */
+    color: var(--main-font-color);
+    background-color: #cccccc;
+    /* box-sizing: border-box; */
+    /* Constraining width, and centering */
+    /* max-width: 50em; */
+    /* margin: auto; */
+    /* padding-left: 5%; */
+    /* padding-right: 5%; */
+}
+
+header {
+    color: var(--accent-font-color);
+    background-color: var(--accent-color);
+    margin: -10px;
+    /* padding: 5px 5px 5px 5px; */
+    /* vertical-align: middle; */
+}
+
+
+h1 {
+    display: inline;
+    /* margin-bottom: 200px; */
+    /* vertical-align: middle; */
+    vertical-align: 20px;
+    padding-left: 10px;
+}
+
+h1, h2, h3, h4 {
+    padding-left: 20px;
+}
+
+#logoContainer {
+    vertical-align: top;
+}
+
+#logo {
+    display: inline;
+    width: 80px;
+    /* filter: invert(); */
+}
+
+nav {
+    color: var(--accent-color);
+    padding: 9px 10px 10px 10px;
+    border-top: solid 2px white;
+}
+
+nav a {
+    color: white;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+label, input, select {
+    display: block;
+}
+
+.box {
+    background-color: #ffffff;
+    padding-top: 10px;
+    margin: 20px 5px 10px 5px;
+    border: solid 1px #666666;
+    border-radius: 5px;
+}
+
+.overviewTable {
+    height: 165px;
+    overflow-y: auto;
+}
+
+.overviewTable thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.createForm {
+    padding: 0 0 20px 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+}
+
+th, td {
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+#loaderContainer {
+    display: inline;
+    height: 40px;
+}
+
+#loaderText {
+    display: none;
+}
+
+#loader {
+    display: none;
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    animation: spin 2s linear infinite;
+    -webkit-animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
