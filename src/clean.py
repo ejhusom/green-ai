@@ -16,6 +16,7 @@ import sys
 import numpy as np
 import pandas as pd
 import yaml
+from codecarbon import track_emissions
 from sklearn.preprocessing import LabelBinarizer, LabelEncoder
 
 from config import (
@@ -28,7 +29,7 @@ from config import (
 )
 from preprocess_utils import find_files
 
-
+@track_emissions(project_name="clean")
 def clean(dir_path=DATA_PATH_RAW, inference_df=None):
     """Clean up inputs.
 
@@ -263,3 +264,4 @@ def parse_profile_warnings():
 if __name__ == "__main__":
 
     clean(sys.argv[1])
+

@@ -12,10 +12,11 @@ import pandas as pd
 import yaml
 from pandas_profiling import ProfileReport
 
+from codecarbon import track_emissions
 from config import PROFILE_PATH
 from preprocess_utils import find_files
 
-
+@track_emissions(project_name="profile")
 def profiling(dir_path):
     """Creates a profile report of a data set.
 
@@ -65,7 +66,6 @@ def profiling(dir_path):
     # Save report to files.
     profile.to_file(PROFILE_PATH / "profile.html")
     profile.to_file(PROFILE_PATH / "profile.json")
-
 
 if __name__ == "__main__":
 
