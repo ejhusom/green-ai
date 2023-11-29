@@ -1,4 +1,4 @@
-# Schwartz 2020: Green AI]
+# Schwartz 2020: Green AI
 
 - Ways of promoting Green AI:
 	- Stopping training early for models that are clearly underperforming can lead to great savings
