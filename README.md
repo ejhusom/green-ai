@@ -5,6 +5,8 @@ A curated overview of resources for reducing the environmental footprint of AI d
 
 ## Tools
 
+### Tools for measuring
+
 - CodeCarbon [[Website]](https://codecarbon.io/) [[GitHub]](https://github.com/mlco2/codecarbon) [[Paper]](https://arxiv.org/pdf/1911.08354.pdf)
 - AIPowerMeter [[Website]](https://greenai-uppa.github.io/AIPowerMeter/) [[GitHub]](https://github.com/GreenAI-Uppa/AIPowerMeter)
 - CarbonAI [[GitHub]](https://github.com/Capgemini-Invent-France/CarbonAI)
@@ -16,6 +18,12 @@ A curated overview of resources for reducing the environmental footprint of AI d
 - tracarbon [[GitHub]](https://github.com/fvaleye/tracarbon)
 - zeus [[Website]](https://ml.energy/zeus) [[GitHub]](https://github.com/ml-energy/zeus) [[Paper]](https://www.usenix.org/system/files/nsdi23-you.pdf)
 
+### Tools for calculation/estimation
+
+The following tools are designed to calculate the footprint based on information about the choice of algorithms, configuration and hardware.
+
+- Green Algorithms [[Website]](http://calculator.green-algorithms.org/) [[Paper]](https://onlinelibrary.wiley.com/doi/epdf/10.1002/advs.202100707)
+- ML CO2 Impact [[Website]](https://mlco2.github.io/impact/) [[Paper]](https://arxiv.org/pdf/1910.09700.pdf)
 
 ## Papers
 
@@ -27,6 +35,7 @@ Particularly important papers are highlighted.
 - **Green AI** (Schwartz et al. 2020) [[Paper]](https://cacm.acm.org/magazines/2020/12/248800-green-ai/fulltext) [[Notes]](notes/schwartz2020.md)
 - Carbontracker: Tracking and Predicting the Carbon Footprint of Training Deep Learning Models (Anthony et al. 2020) [[Paper]](https://arxiv.org/pdf/2007.03051.pdf)
 - Carbon Emissions and Large Neural Network Training (Patterson, et al. 2021) [[Paper]](https://arxiv.org/ftp/arxiv/papers/2104/2104.10350.pdf)
+- Chasing Carbon: The Elusive Environmental Footprint of Computing (Gupta et al. 2020) [[Paper]](https://arxiv.org/pdf/2011.02839.pdf)
 - Green Algorithms: Quantifying the Carbon Footprint of Computation (Lannelongue et al. 2021) [[Paper]](https://onlinelibrary.wiley.com/doi/10.1002/advs.202100707)
 - A Pratical Guide to Quantifying Carbon Emissions for Machine Learning researchers and practitioners (Ligozat et al. 2021) [[Paper]](https://hal.archives-ouvertes.fr/hal-03376391/document)
 - **Aligning artificial intelligence with climate change mitigation** (Kaack et al. 2021) [[Paper]](https://hal.archives-ouvertes.fr/hal-03368037/document)
