@@ -2,33 +2,37 @@
 
 A curated overview of resources for reducing the environmental footprint of AI development and usage.
 
+Pull requests welcome!
+
 
 ## Tools
 
-### Tools for measuring
+### Tools for measuring and quantifying footprint
 
-- CodeCarbon [[Website]](https://codecarbon.io/) [[GitHub]](https://github.com/mlco2/codecarbon) [[Paper]](https://arxiv.org/pdf/1911.08354.pdf)
-- AIPowerMeter [[Website]](https://greenai-uppa.github.io/AIPowerMeter/) [[GitHub]](https://github.com/GreenAI-Uppa/AIPowerMeter)
-- CarbonAI [[GitHub]](https://github.com/Capgemini-Invent-France/CarbonAI)
-- carbontracker [[GitHub]](https://github.com/lfwa/carbontracker) [[Paper]](https://arxiv.org/pdf/2007.03051.pdf)
-- Eco2AI [[GitHub]](https://github.com/sb-ai-lab/Eco2AI) [[Paper]](https://arxiv.org/pdf/2208.00406.pdf)
-- experiment-impact-tracker [[GitHub]](https://github.com/Breakend/experiment-impact-tracker) [[Paper]](https://arxiv.org/pdf/2002.05651.pdf)
-- powermeter [[GitHub]](https://github.com/autoai-incubator/powermeter)
-- pyJoules [[GitHub]](https://github.com/powerapi-ng/pyJoules)
-- tracarbon [[GitHub]](https://github.com/fvaleye/tracarbon)
-- zeus [[Website]](https://ml.energy/zeus) [[GitHub]](https://github.com/ml-energy/zeus) [[Paper]](https://www.usenix.org/system/files/nsdi23-you.pdf)
+- AIPowerMeter [[Website]](https://greenai-uppa.github.io/AIPowerMeter/) [[Source code]](https://github.com/GreenAI-Uppa/AIPowerMeter)
+- CarbonAI [[Source code]](https://github.com/Capgemini-Invent-France/CarbonAI)
+- carbontracker [[Source code]](https://github.com/lfwa/carbontracker) [[Paper]](https://arxiv.org/pdf/2007.03051.pdf)
+- CodeCarbon [[Website]](https://codecarbon.io/) [[Source code]](https://github.com/mlco2/codecarbon) [[Paper]](https://arxiv.org/pdf/1911.08354.pdf)
+- Eco2AI [[Source code]](https://github.com/sb-ai-lab/Eco2AI) [[Paper]](https://arxiv.org/pdf/2208.00406.pdf)
+- experiment-impact-tracker [[Source code]](https://github.com/Breakend/experiment-impact-tracker) [[Paper]](https://arxiv.org/pdf/2002.05651.pdf)
+- powermeter [[Source code]](https://github.com/autoai-incubator/powermeter)
+- pyJoules [[Source code]](https://github.com/powerapi-ng/pyJoules)
+- tracarbon [[Source code]](https://github.com/fvaleye/tracarbon)
+- zeus [[Website]](https://ml.energy/zeus) [[Source code]](https://github.com/ml-energy/zeus) [[Paper]](https://www.usenix.org/system/files/nsdi23-you.pdf)
 
-### Tools for calculation/estimation
+### Tools for calculation/estimation of footprint
 
 The following tools are designed to calculate the footprint based on information about the choice of algorithms, configuration and hardware.
 
 - Green Algorithms [[Website]](http://calculator.green-algorithms.org/) [[Paper]](https://onlinelibrary.wiley.com/doi/epdf/10.1002/advs.202100707)
 - ML CO2 Impact [[Website]](https://mlco2.github.io/impact/) [[Paper]](https://arxiv.org/pdf/1910.09700.pdf)
 
+### Tools for AI/ML development with integrated carbon footprint reporting
+
+- d2m [[Website]](https://sintef-9012.github.io/d2m/) [[Source code]](https://github.com/SINTEF-9012/d2m) – a machine learning pipeline for ML model development with automatic monitoring and tracking of the carbon footprint 
 ## Papers
 
 Particularly important papers are highlighted.
-
 
 - **Energy and Policy Considerations for Deep Learning in NLP** (Strubell et al. 2019) [[Paper]](https://arxiv.org/pdf/1906.02243.pdf)
 - Quantifying the Carbon Emissions of Machine Learning (Lacoste et al. 2019) [[Paper]](https://arxiv.org/pdf/1910.09700.pdf)
@@ -68,7 +72,7 @@ Particularly important papers are highlighted.
 
 ### Green AI and Federated Learning
 
-- Savazzi 2021: A framework for energy and carbon footprint analysis of distributed and federated edge learning (Savazzi et al. 2021) [[Paper]](https://arxiv.org/pdf/2103.10346.pdf) [[Notes]](notes/savazzi2021.md)
+- A framework for energy and carbon footprint analysis of distributed and federated edge learning (Savazzi et al. 2021) [[Paper]](https://arxiv.org/pdf/2103.10346.pdf) [[Notes]](notes/savazzi2021.md)
 - A first look into the carbon footprint of federated learning (Qiu et al. 2022) [[Paper]](https://arxiv.org/pdf/2102.07627.pdf) [[Notes]](notes/qiu2022.md)
 
 <!-- ### Green AI and Edge Computing -->
@@ -80,6 +84,11 @@ Particularly important papers are highlighted.
 <!-- 		- Pruning -->
 <!-- 		- Quantization -->
 <!-- 	- My thoughts: Ikke så dyp analyse. Kun en presentasjon, ikke ordentlig artikkel. Snakker bare om pruning ig quantization. -->
+
+## Organizations, projects and foundations
+
+- Green Software Foundation – non-profit foundation promoting software development with sustainability as a core priority [[Website]](https://greensoftware.foundation/)
+- ENFIELD: European Lighthouse to Manifest Trustworthy and Green AI – project for creating a European Centre of Excellence with Green AI as one of the pillars [[Website]](https://www.enfield-project.eu/)
 
 ## Other resources
 
