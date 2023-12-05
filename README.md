@@ -2,7 +2,7 @@
 
 A curated overview of resources for reducing the environmental footprint of AI development and usage.
 
-Pull requests welcome!
+Contributions and pull requests are welcome!
 
 
 ## Tools
