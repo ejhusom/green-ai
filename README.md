@@ -60,6 +60,7 @@ Particularly important papers are highlighted.
 - Zeus: Understanding and Optimizing GPU Energy Consumption of DNN Training (You et al. 2023) [[Paper]](https://www.usenix.org/conference/nsdi23/presentation/you)
 - Chasing Low-Carbon Electricity for Practical and Sustainable DNN Training (Yang et al. 2023) [[Paper]](https://www.climatechange.ai/papers/iclr2023/29)
 - LLMCarbon: Modeling the End-To-End Carbon Footprint of Large Language Models (Faiz et al. 2023) [[Paper]](https://arxiv.org/pdf/2309.14393.pdf)
+- Power Hungry Processing: Watts Driving the Cost of AI Deployment? (Luccioni et al. 2023) [[Paper]](https://arxiv.org/pdf/2311.16863.pdf)
 
 <!-- - How to shrink AI's ballooning carbon footprint (Gibney et al. 2022) [[Paper]]() -->
 
