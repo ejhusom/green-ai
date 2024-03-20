@@ -63,6 +63,7 @@ Particularly important papers are highlighted.
 - Power Hungry Processing: Watts Driving the Cost of AI Deployment? (Luccioni et al. 2023) [[Paper]](https://arxiv.org/pdf/2311.16863.pdf)
 - A Synthesis of Green Architectural Tactics for ML-Enabled Systems (Järvenpää et al. 2023) [[Paper]](https://arxiv.org/pdf/2312.09610.pdf)
 - From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference (Samsi et al. 2023) [[Paper]](https://arxiv.org/abs/2310.03003)
+- **Power Hungry Processing: Watts Driving the Cost of AI Deployment?** (Luccioni et al. 2023) [[Paper](https://arxiv.org/pdf/2311.16863.pdf)
 
 <!-- - How to shrink AI's ballooning carbon footprint (Gibney et al. 2022) [[Paper]]() -->
 
