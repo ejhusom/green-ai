@@ -14,6 +14,7 @@ Contributions and pull requests are welcome!
 - carbontracker [[Source code]](https://github.com/lfwa/carbontracker) [[Paper]](https://arxiv.org/pdf/2007.03051.pdf)
 - CodeCarbon [[Website]](https://codecarbon.io/) [[Source code]](https://github.com/mlco2/codecarbon) [[Paper]](https://arxiv.org/pdf/1911.08354.pdf)
 - Eco2AI [[Source code]](https://github.com/sb-ai-lab/Eco2AI) [[Paper]](https://arxiv.org/pdf/2208.00406.pdf)
+- EnergyMeter [[Source code]](https://github.com/maufadel/EnergyMeter) [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10549890)
 - experiment-impact-tracker [[Source code]](https://github.com/Breakend/experiment-impact-tracker) [[Paper]](https://arxiv.org/pdf/2002.05651.pdf)
 - powermeter [[Source code]](https://github.com/autoai-incubator/powermeter)
 - pyJoules [[Source code]](https://github.com/powerapi-ng/pyJoules)
@@ -30,6 +31,7 @@ The following tools are designed to calculate the footprint based on information
 ### Tools for AI/ML development with integrated carbon footprint reporting
 
 - d2m [[Website]](https://sintef-9012.github.io/d2m/) [[Source code]](https://github.com/SINTEF-9012/d2m) – a machine learning pipeline for ML model development with automatic monitoring and tracking of the carbon footprint 
+
 ## Papers
 
 Particularly important papers are highlighted.
@@ -63,7 +65,10 @@ Particularly important papers are highlighted.
 - Power Hungry Processing: Watts Driving the Cost of AI Deployment? (Luccioni et al. 2023) [[Paper]](https://arxiv.org/pdf/2311.16863.pdf)
 - A Synthesis of Green Architectural Tactics for ML-Enabled Systems (Järvenpää et al. 2023) [[Paper]](https://arxiv.org/pdf/2312.09610.pdf)
 - From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference (Samsi et al. 2023) [[Paper]](https://arxiv.org/abs/2310.03003)
-- **Power Hungry Processing: Watts Driving the Cost of AI Deployment?** (Luccioni et al. 2023) [[Paper](https://arxiv.org/pdf/2311.16863.pdf)
+- **Power Hungry Processing: Watts Driving the Cost of AI Deployment?** (Luccioni et al. 2023) [[Paper](https://arxiv.org/pdf/2311.16863.pdf)]
+- Measuring and Improving the Energy Efficiency of Large Language Models Inference (Argerich et al. 2024) [[Paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10549890)] [[GitHub](https://github.com/maufadel/EnergyMeter)]
+- Hybrid Heterogeneous Clusters Can Lower the Energy Consumption of LLM Inference Workloads (Wilkins et al. 2024) [[Paper](https://dl.acm.org/doi/pdf/10.1145/3632775.3662830)]
+- Offline Energy-Optimal LLM Serving: Workload-Based Energy Models for LLM Inference on Heterogeneous Systems (Wilkins et al. 2024) [[Paper](https://arxiv.org/pdf/2407.04014)]
 
 <!-- - How to shrink AI's ballooning carbon footprint (Gibney et al. 2022) [[Paper]]() -->
 
