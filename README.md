@@ -81,7 +81,7 @@ Particularly important papers are highlighted.
 - Beyond Efficiency: Scaling AI Sustainably (Wu et al. 2024) [[Paper]](https://arxiv.org/abs/2406.05303v1)
 - Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems (Miao et al. 2024) [[Paper]](https://arxiv.org/abs/2312.15234)
 - Towards Greener LLMs: Bringing Energy-Efficiency to the Forefront of LLM Inference (Stojkovic et al. 2024) [[Paper]](https://arxiv.org/abs/2403.20306)
-- The Price of Prompting: Profiling Energy Use in Large Language Models Inference [[Paper](https://arxiv.org/abs/2407.16893)
+- The Price of Prompting: Profiling Energy Use in Large Language Models Inference (Husom et al. 2024) [[Paper](https://arxiv.org/abs/2407.16893)]
 - Hybrid Heterogeneous Clusters Can Lower the Energy Consumption of LLM Inference Workloads (Wilkins et al. 2024) [[Paper](https://dl.acm.org/doi/pdf/10.1145/3632775.3662830)]
 - Offline Energy-Optimal LLM Serving: Workload-Based Energy Models for LLM Inference on Heterogeneous Systems (Wilkins et al. 2024) [[Paper](https://arxiv.org/pdf/2407.04014)]
 
