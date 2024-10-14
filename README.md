@@ -85,6 +85,7 @@ Particularly important papers are highlighted.
 - Hybrid Heterogeneous Clusters Can Lower the Energy Consumption of LLM Inference Workloads (Wilkins et al. 2024) [[Paper](https://dl.acm.org/doi/pdf/10.1145/3632775.3662830)]
 - Offline Energy-Optimal LLM Serving: Workload-Based Energy Models for LLM Inference on Heterogeneous Systems (Wilkins et al. 2024) [[Paper](https://arxiv.org/pdf/2407.04014)]
 - AI, Climate, and Regulation: From Data Centers to the AI Act (Erbert et al. 2024 [[Paper](https://arxiv.org/pdf/2410.06681)
+- LLMCO2: Advancing Accurate Carbon Footprint Prediction for LLM Inferences (Fu et al. 2024) [[Paper](https://arxiv.org/abs/2410.02950)
 
 <!-- - How to shrink AI's ballooning carbon footprint (Gibney et al. 2022) [[Paper]]() -->
 
