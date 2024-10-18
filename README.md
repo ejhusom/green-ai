@@ -87,6 +87,7 @@ Particularly important papers are highlighted.
 - AI, Climate, and Regulation: From Data Centers to the AI Act (Erbert et al. 2024 [[Paper]](https://arxiv.org/pdf/2410.06681)
 - LLMCO2: Advancing Accurate Carbon Footprint Prediction for LLM Inferences (Fu et al. 2024) [[Paper]](https://arxiv.org/abs/2410.02950)
 - Addition is all you need for energy-efficient language models (Luo et al. 2024) [[Paper]](https://arxiv.org/pdf/2410.00907)
+- Artificial Intelligence in Climate Change Mitigation: A Review of Predictive Modeling and Data-Driven Solutions for Reducing Greenhouse Gas Emissions (Adegbite et al. 2024) [[Paper]](https://wjarr.com/sites/default/files/WJARR-2024-3043.pdf)
 
 <!-- - How to shrink AI's ballooning carbon footprint (Gibney et al. 2022) [[Paper]]() -->
 
